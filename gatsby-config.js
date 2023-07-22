@@ -4,7 +4,8 @@
 module.exports = {
   siteMetadata: {
     title: `age-calculator`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.yourdomain.tld`,
+    lang: `en-US`
   },
   plugins: ["gatsby-plugin-postcss"]
 };
