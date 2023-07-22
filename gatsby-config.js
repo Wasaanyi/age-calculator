@@ -5,7 +5,17 @@ module.exports = {
   siteMetadata: {
     title: `age-calculator`,
     siteUrl: `https://www.yourdomain.tld`,
-    lang: `en-US`
   },
-  plugins: ["gatsby-plugin-postcss"]
+  plugins: [
+      "gatsby-plugin-postcss",
+      "gatsby-plugin-image",
+      "gatsby-plugin-sharp",
+      {
+        resolve: "gatsby-source-filesystem",
+        options: {
+          name: "images",
+          path: `${__dirname}/src/images`,
+        },
+      },
+  ]
 };
