@@ -130,8 +130,8 @@ const IndexPage = () => {
                     <FormControl errors={errors} name="day" data={formData.day} handleChange={handleChange} holder="DD"/>
                     <FormControl errors={errors} name="month" data={formData.month} handleChange={handleChange} holder="MM"/>
                     <FormControl errors={errors} name="year" data={formData.year} handleChange={handleChange} holder="YYYY"/>
-                    {errors.dateError && <div className="text-red-500 text-[0.7rem]">{errors.dateError}</div>}
                 </div>
+                {errors.dateError && <div className="text-red-500 text-[0.7rem]">{errors.dateError}</div>}
                 <SubmitButton/>
             </form>
             <Result data={validData} />
