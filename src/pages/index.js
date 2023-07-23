@@ -4,6 +4,7 @@ import {Result} from "../components/result";
 import {SubmitButton} from "../components/submitButton";
 import {FormControl} from "../components/formControl";
 import {isValidDate} from "../utilities/isValidDate";
+import {Card} from "../components/card";
 
 const IndexPage = () => {
 
@@ -124,7 +125,7 @@ const IndexPage = () => {
     }
     return (
     <main className="flex items-center justify-center h-screen bg-gray-100 ">
-        <div className="p-3 h-96 md:w-1/3 md:max-w-lg w-screen mx-2 bg-white rounded-lg  rounded-br-[150px] ">
+        <Card>
             <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-3 md:grid-cols-4 gap-3">
                     <FormControl errors={errors} name="day" data={formData.day} handleChange={handleChange} holder="DD"/>
@@ -135,7 +136,7 @@ const IndexPage = () => {
                 <SubmitButton/>
             </form>
             <Result data={validData} />
-        </div>
+        </Card>
     </main>
   )
 }
